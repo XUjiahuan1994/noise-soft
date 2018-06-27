@@ -86,10 +86,14 @@
     <Reference Include="adodb, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </Reference>
-    <Reference Include="Microsoft.CSharp" />
-    <Reference Include="MWArray, Version=2.16.0.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=MSIL">
+    <Reference Include="getTandFdataNative, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>D:\Program Files\MATLAB\MATLAB Runtime\v901\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
+      <HintPath>..\Matlabtest\getTandFdata\for_redistribution_files_only\getTandFdataNative.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MWArray, Version=2.16.1.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>D:\Program Files\MATLAB\MATLAB Runtime\v91\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
     </Reference>
     <Reference Include="readtimedata">
       <HintPath>..\readtimedata\for_testing\readtimedata.dll</HintPath>
@@ -116,6 +120,7 @@
     <Compile Include="dianyundianliu\adddevice.Designer.cs">
       <DependentUpon>adddevice.cs</DependentUpon>
     </Compile>
+    <Compile Include="FFThelp.cs" />
     <Compile Include="ketingzaosheng\AudioNoiseform.cs">
       <SubType>Form</SubType>
     </Compile>

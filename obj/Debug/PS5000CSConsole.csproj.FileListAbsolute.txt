@@ -292,10 +292,11 @@ C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接�
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\ps5000example.exe
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\ps5000example.pdb
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\MWArray.dll
-C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\readtimedata.dll
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\MWArray.xml
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\readtimedata.xml
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\ps5000example.AudioNoiseform.resources
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\ps5000example.WelcomeForm.resources
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\temdis.dll
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\PS5000CSConsole.csprojResolveAssemblyReference.cache
+C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\getTandFdataNative.dll
+C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\readtimedata.dll

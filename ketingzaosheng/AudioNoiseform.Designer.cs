@@ -34,6 +34,8 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox_voltage0 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.textBox_Fs0 = new System.Windows.Forms.TextBox();
             this.textBox_size_n0 = new System.Windows.Forms.TextBox();
             this.textBox_filename0 = new System.Windows.Forms.TextBox();
@@ -57,13 +59,14 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel_figure = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
+            this.button5 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.textBox_voltage0 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.zedGraphControl3 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
+            this.button6 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -72,22 +75,21 @@
             this.tabPage2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel_figure.SuspendLayout();
-            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(1, 45);
+            this.tabControl1.Location = new System.Drawing.Point(11, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(629, 392);
+            this.tabControl1.Size = new System.Drawing.Size(320, 519);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.label10);
             this.tabPage1.Controls.Add(this.label6);
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel_data_voltage);
@@ -95,7 +97,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 25);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(621, 363);
+            this.tabPage1.Size = new System.Drawing.Size(312, 490);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "单文件处理";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -104,7 +106,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(321, 110);
+            this.label10.Location = new System.Drawing.Point(5, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(67, 15);
             this.label10.TabIndex = 5;
@@ -121,6 +123,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.label10);
             this.panel3.Controls.Add(this.textBox_voltage0);
             this.panel3.Controls.Add(this.label11);
             this.panel3.Controls.Add(this.textBox_Fs0);
@@ -129,10 +132,27 @@
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Controls.Add(this.label9);
-            this.panel3.Location = new System.Drawing.Point(306, 115);
+            this.panel3.Location = new System.Drawing.Point(6, 298);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(288, 227);
+            this.panel3.Size = new System.Drawing.Size(294, 182);
             this.panel3.TabIndex = 3;
+            // 
+            // textBox_voltage0
+            // 
+            this.textBox_voltage0.Location = new System.Drawing.Point(101, 144);
+            this.textBox_voltage0.Name = "textBox_voltage0";
+            this.textBox_voltage0.Size = new System.Drawing.Size(172, 25);
+            this.textBox_voltage0.TabIndex = 9;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label11.Location = new System.Drawing.Point(3, 145);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(109, 20);
+            this.label11.TabIndex = 8;
+            this.label11.Text = "电压等级：";
             // 
             // textBox_Fs0
             // 
@@ -195,16 +215,16 @@
             this.panel_data_voltage.Controls.Add(this.label3);
             this.panel_data_voltage.Controls.Add(this.label2);
             this.panel_data_voltage.Controls.Add(this.label1);
-            this.panel_data_voltage.Location = new System.Drawing.Point(6, 118);
+            this.panel_data_voltage.Location = new System.Drawing.Point(6, 111);
             this.panel_data_voltage.Name = "panel_data_voltage";
-            this.panel_data_voltage.Size = new System.Drawing.Size(294, 224);
+            this.panel_data_voltage.Size = new System.Drawing.Size(294, 181);
             this.panel_data_voltage.TabIndex = 2;
             // 
             // textBox_voltage8
             // 
-            this.textBox_voltage8.Location = new System.Drawing.Point(113, 141);
+            this.textBox_voltage8.Location = new System.Drawing.Point(101, 141);
             this.textBox_voltage8.Name = "textBox_voltage8";
-            this.textBox_voltage8.Size = new System.Drawing.Size(160, 25);
+            this.textBox_voltage8.Size = new System.Drawing.Size(172, 25);
             this.textBox_voltage8.TabIndex = 8;
             // 
             // label5
@@ -219,23 +239,23 @@
             // 
             // textBox_Fs8
             // 
-            this.textBox_Fs8.Location = new System.Drawing.Point(113, 22);
+            this.textBox_Fs8.Location = new System.Drawing.Point(101, 22);
             this.textBox_Fs8.Name = "textBox_Fs8";
-            this.textBox_Fs8.Size = new System.Drawing.Size(160, 25);
+            this.textBox_Fs8.Size = new System.Drawing.Size(172, 25);
             this.textBox_Fs8.TabIndex = 6;
             // 
             // textBox_size_n8
             // 
-            this.textBox_size_n8.Location = new System.Drawing.Point(113, 57);
+            this.textBox_size_n8.Location = new System.Drawing.Point(101, 60);
             this.textBox_size_n8.Name = "textBox_size_n8";
-            this.textBox_size_n8.Size = new System.Drawing.Size(160, 25);
+            this.textBox_size_n8.Size = new System.Drawing.Size(172, 25);
             this.textBox_size_n8.TabIndex = 5;
             // 
             // textBox_filename8
             // 
-            this.textBox_filename8.Location = new System.Drawing.Point(113, 100);
+            this.textBox_filename8.Location = new System.Drawing.Point(101, 100);
             this.textBox_filename8.Name = "textBox_filename8";
-            this.textBox_filename8.Size = new System.Drawing.Size(160, 25);
+            this.textBox_filename8.Size = new System.Drawing.Size(172, 25);
             this.textBox_filename8.TabIndex = 4;
             this.textBox_filename8.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -263,7 +283,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(9, 22);
+            this.label1.Location = new System.Drawing.Point(9, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 0;
@@ -273,18 +293,18 @@
             // 
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.button3);
-            this.panel1.Location = new System.Drawing.Point(7, 6);
+            this.panel1.Location = new System.Drawing.Point(6, 6);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(587, 88);
+            this.panel1.Size = new System.Drawing.Size(214, 88);
             this.panel1.TabIndex = 1;
             // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button1.Font = new System.Drawing.Font("宋体", 10F);
-            this.button1.Location = new System.Drawing.Point(42, 19);
+            this.button1.Location = new System.Drawing.Point(3, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(176, 48);
+            this.button1.Size = new System.Drawing.Size(190, 33);
             this.button1.TabIndex = 0;
             this.button1.Text = "选择电晕电流文件";
             this.button1.UseVisualStyleBackColor = false;
@@ -295,9 +315,9 @@
             this.button3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.button3.Font = new System.Drawing.Font("宋体", 10F);
             this.button3.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.button3.Location = new System.Drawing.Point(347, 19);
+            this.button3.Location = new System.Drawing.Point(3, 52);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(176, 48);
+            this.button3.Size = new System.Drawing.Size(190, 33);
             this.button3.TabIndex = 2;
             this.button3.Text = "选择电晕电流背景文件";
             this.button3.UseVisualStyleBackColor = false;
@@ -309,7 +329,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(621, 363);
+            this.tabPage2.Size = new System.Drawing.Size(326, 700);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "多文件处理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -335,9 +355,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(40, 112);
+            this.button4.Location = new System.Drawing.Point(40, 594);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 29);
+            this.button4.Size = new System.Drawing.Size(140, 46);
             this.button4.TabIndex = 4;
             this.button4.Text = "查看波形";
             this.button4.UseVisualStyleBackColor = true;
@@ -345,30 +365,53 @@
             // 
             // panel_figure
             // 
-            this.panel_figure.Controls.Add(this.label4);
-            this.panel_figure.Location = new System.Drawing.Point(655, 57);
+            this.panel_figure.Controls.Add(this.zedGraphControl4);
+            this.panel_figure.Controls.Add(this.zedGraphControl3);
+            this.panel_figure.Controls.Add(this.zedGraphControl2);
+            this.panel_figure.Controls.Add(this.zedGraphControl1);
+            this.panel_figure.Location = new System.Drawing.Point(352, 13);
             this.panel_figure.Margin = new System.Windows.Forms.Padding(4);
             this.panel_figure.Name = "panel_figure";
-            this.panel_figure.Size = new System.Drawing.Size(1100, 800);
+            this.panel_figure.Size = new System.Drawing.Size(1426, 774);
             this.panel_figure.TabIndex = 7;
             // 
-            // label4
+            // zedGraphControl2
             // 
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(175, 138);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(345, 43);
-            this.label4.TabIndex = 13;
+            this.zedGraphControl2.Location = new System.Drawing.Point(0, 373);
+            this.zedGraphControl2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.zedGraphControl2.Name = "zedGraphControl2";
+            this.zedGraphControl2.ScrollMaxX = 0D;
+            this.zedGraphControl2.ScrollMaxY = 0D;
+            this.zedGraphControl2.ScrollMaxY2 = 0D;
+            this.zedGraphControl2.ScrollMinX = 0D;
+            this.zedGraphControl2.ScrollMinY = 0D;
+            this.zedGraphControl2.ScrollMinY2 = 0D;
+            this.zedGraphControl2.Size = new System.Drawing.Size(706, 371);
+            this.zedGraphControl2.TabIndex = 3;
             // 
-            // button7
+            // zedGraphControl1
             // 
-            this.button7.Location = new System.Drawing.Point(346, 501);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(140, 46);
-            this.button7.TabIndex = 8;
-            this.button7.Text = "电晕电流信号处理";
-            this.button7.UseVisualStyleBackColor = true;
+            this.zedGraphControl1.Location = new System.Drawing.Point(0, 0);
+            this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.zedGraphControl1.Name = "zedGraphControl1";
+            this.zedGraphControl1.ScrollMaxX = 0D;
+            this.zedGraphControl1.ScrollMaxY = 0D;
+            this.zedGraphControl1.ScrollMaxY2 = 0D;
+            this.zedGraphControl1.ScrollMinX = 0D;
+            this.zedGraphControl1.ScrollMinY = 0D;
+            this.zedGraphControl1.ScrollMinY2 = 0D;
+            this.zedGraphControl1.Size = new System.Drawing.Size(706, 374);
+            this.zedGraphControl1.TabIndex = 2;
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(40, 720);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(140, 46);
+            this.button5.TabIndex = 8;
+            this.button5.Text = "电晕电流信号处理";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // comboBox2
             // 
@@ -376,59 +419,76 @@
             this.comboBox2.Items.AddRange(new object[] {
             "加压信号时域波形",
             "加压信号离散频谱"});
-            this.comboBox2.Location = new System.Drawing.Point(39, 36);
+            this.comboBox2.Location = new System.Drawing.Point(35, 565);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(161, 23);
             this.comboBox2.TabIndex = 11;
             // 
-            // panel4
+            // zedGraphControl3
             // 
-            this.panel4.Controls.Add(this.button4);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Location = new System.Drawing.Point(11, 454);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(262, 188);
-            this.panel4.TabIndex = 12;
+            this.zedGraphControl3.Location = new System.Drawing.Point(706, 0);
+            this.zedGraphControl3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.zedGraphControl3.Name = "zedGraphControl3";
+            this.zedGraphControl3.ScrollMaxX = 0D;
+            this.zedGraphControl3.ScrollMaxY = 0D;
+            this.zedGraphControl3.ScrollMaxY2 = 0D;
+            this.zedGraphControl3.ScrollMinX = 0D;
+            this.zedGraphControl3.ScrollMinY = 0D;
+            this.zedGraphControl3.ScrollMinY2 = 0D;
+            this.zedGraphControl3.Size = new System.Drawing.Size(706, 374);
+            this.zedGraphControl3.TabIndex = 4;
+            this.zedGraphControl3.Visible = false;
             // 
-            // label11
+            // zedGraphControl4
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(3, 145);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 20);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "电压等级：";
+            this.zedGraphControl4.Location = new System.Drawing.Point(706, 373);
+            this.zedGraphControl4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.zedGraphControl4.Name = "zedGraphControl4";
+            this.zedGraphControl4.ScrollMaxX = 0D;
+            this.zedGraphControl4.ScrollMaxY = 0D;
+            this.zedGraphControl4.ScrollMaxY2 = 0D;
+            this.zedGraphControl4.ScrollMinX = 0D;
+            this.zedGraphControl4.ScrollMinY = 0D;
+            this.zedGraphControl4.ScrollMinY2 = 0D;
+            this.zedGraphControl4.Size = new System.Drawing.Size(706, 371);
+            this.zedGraphControl4.TabIndex = 5;
+            this.zedGraphControl4.Visible = false;
             // 
-            // textBox_voltage0
+            // button6
             // 
-            this.textBox_voltage0.Location = new System.Drawing.Point(101, 144);
-            this.textBox_voltage0.Name = "textBox_voltage0";
-            this.textBox_voltage0.Size = new System.Drawing.Size(172, 25);
-            this.textBox_voltage0.TabIndex = 9;
+            this.button6.Location = new System.Drawing.Point(35, 865);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(156, 46);
+            this.button6.TabIndex = 12;
+            this.button6.Text = "计算可听噪声A声级";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click_1);
             // 
-            // label12
+            // dataGridView1
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(16, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(127, 15);
-            this.label12.TabIndex = 13;
-            this.label12.Text = "可听噪声间接检测";
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(352, 822);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 27;
+            this.dataGridView1.Size = new System.Drawing.Size(266, 149);
+            this.dataGridView1.TabIndex = 13;
             // 
             // AudioNoiseform
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1906, 1005);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.button7);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.panel_figure);
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AudioNoiseform";
             this.Text = "AudioNoiseform";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AudioNoiseform_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
@@ -441,9 +501,8 @@
             this.tabPage2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel_figure.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -467,10 +526,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Panel panel_figure;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox textBox_filename0;
         private System.Windows.Forms.TextBox textBox_size_n8;
         private System.Windows.Forms.TextBox textBox_filename8;
@@ -483,6 +540,11 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox_voltage0;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private ZedGraph.ZedGraphControl zedGraphControl1;
+        private ZedGraph.ZedGraphControl zedGraphControl2;
+        private ZedGraph.ZedGraphControl zedGraphControl4;
+        private ZedGraph.ZedGraphControl zedGraphControl3;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

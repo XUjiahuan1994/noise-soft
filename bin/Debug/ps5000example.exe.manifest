@@ -42,26 +42,43 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MWArray.dll" size="116736">
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
       <assemblyIdentity name="MWArray" version="2.16.0.0" publicKeyToken="E1D84A0DA19DB86F" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="getTandFdataNative.dll" size="2688512">
+      <assemblyIdentity name="getTandFdataNative" version="0.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>SQOq3m92+D5hQqPjOCwcWM5S8k8=</dsig:DigestValue>
+        <dsig:DigestValue>vV9ZtlmWevcoYcb3C3mX/v9jtws=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ps5000example.exe" size="265600">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MWArray.dll" size="116736">
+      <assemblyIdentity name="MWArray" version="2.16.1.0" publicKeyToken="E1D84A0DA19DB86F" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>gSaG8Lg16AGIPrWYZDojaK053L0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ps5000example.exe" size="274304">
       <assemblyIdentity name="ps5000example" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>TQPm/jU8VmPT2CA/ARIfwHuh1bM=</dsig:DigestValue>
+        <dsig:DigestValue>yk2Je4oOgD9LFX6zKmHtOfmeKgA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
