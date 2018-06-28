@@ -91,6 +91,9 @@
       <HintPath>..\Matlabtest\getTandFdata\for_redistribution_files_only\getTandFdataNative.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MWArray, Version=2.16.1.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>D:\Program Files\MATLAB\MATLAB Runtime\v91\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
@@ -120,7 +123,14 @@
     <Compile Include="dianyundianliu\adddevice.Designer.cs">
       <DependentUpon>adddevice.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExcelHelp.cs" />
     <Compile Include="FFThelp.cs" />
+    <Compile Include="ketingzaosheng\setcanshu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ketingzaosheng\setcanshu.Designer.cs">
+      <DependentUpon>setcanshu.cs</DependentUpon>
+    </Compile>
     <Compile Include="ketingzaosheng\AudioNoiseform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +212,12 @@
     <Compile Include="dianyundianliu\Message9.Designer.cs">
       <DependentUpon>Message9.cs</DependentUpon>
     </Compile>
+    <Compile Include="ketingzaosheng\Calculate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ketingzaosheng\Calculate.Designer.cs">
+      <DependentUpon>Calculate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -227,6 +243,10 @@
   <ItemGroup>
     <EmbeddedResource Include="dianyundianliu\adddevice.resx">
       <DependentUpon>adddevice.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ketingzaosheng\setcanshu.resx">
+      <DependentUpon>setcanshu.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="ketingzaosheng\AudioNoiseform.resx">
@@ -269,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="dianyundianliu\Message9.resx">
       <DependentUpon>Message9.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ketingzaosheng\Calculate.resx">
+      <DependentUpon>Calculate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

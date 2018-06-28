@@ -63,7 +63,6 @@
             this.button9 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.button8 = new System.Windows.Forms.Button();
-            this.ZedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.panel5 = new System.Windows.Forms.Panel();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -91,6 +90,7 @@
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
+            this.ZedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -510,43 +510,15 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // ZedGraphControl1
-            // 
-            this.ZedGraphControl1.AutoScroll = true;
-            this.ZedGraphControl1.AutoSize = true;
-            this.ZedGraphControl1.BackColor = System.Drawing.SystemColors.Window;
-            this.ZedGraphControl1.Font = new System.Drawing.Font("宋体", 6.6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ZedGraphControl1.IsAntiAlias = true;
-            this.ZedGraphControl1.IsAutoScrollRange = true;
-            this.ZedGraphControl1.IsEnableHEdit = true;
-            this.ZedGraphControl1.IsShowHScrollBar = true;
-            this.ZedGraphControl1.IsShowVScrollBar = true;
-            this.ZedGraphControl1.IsSynchronizeXAxes = true;
-            this.ZedGraphControl1.IsSynchronizeYAxes = true;
-            this.ZedGraphControl1.IsZoomOnMouseCenter = true;
-            this.ZedGraphControl1.Location = new System.Drawing.Point(4, 4);
-            this.ZedGraphControl1.Margin = new System.Windows.Forms.Padding(4);
-            this.ZedGraphControl1.Name = "ZedGraphControl1";
-            this.ZedGraphControl1.ScrollMaxX = 0D;
-            this.ZedGraphControl1.ScrollMaxY = 0D;
-            this.ZedGraphControl1.ScrollMaxY2 = 0D;
-            this.ZedGraphControl1.ScrollMinX = 0D;
-            this.ZedGraphControl1.ScrollMinY = 0D;
-            this.ZedGraphControl1.ScrollMinY2 = 0D;
-            this.ZedGraphControl1.Size = new System.Drawing.Size(1703, 789);
-            this.ZedGraphControl1.TabIndex = 5;
-            this.ZedGraphControl1.ZoomStepFraction = 0.001D;
-            this.ZedGraphControl1.Load += new System.EventHandler(this.ZedGraphControl1_Load);
-            // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.ZedGraphControl1);
             this.panel5.Controls.Add(this.textBox5);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Controls.Add(this.ZedGraphControl1);
             this.panel5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel5.Location = new System.Drawing.Point(186, 31);
+            this.panel5.Location = new System.Drawing.Point(269, 31);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1798, 862);
+            this.panel5.Size = new System.Drawing.Size(1715, 862);
             this.panel5.TabIndex = 6;
             // 
             // textBox5
@@ -704,7 +676,7 @@
             // 启动设置ToolStripMenuItem1
             // 
             this.启动设置ToolStripMenuItem1.Name = "启动设置ToolStripMenuItem1";
-            this.启动设置ToolStripMenuItem1.Size = new System.Drawing.Size(170, 32);
+            this.启动设置ToolStripMenuItem1.Size = new System.Drawing.Size(216, 32);
             this.启动设置ToolStripMenuItem1.Text = "启动设置";
             this.启动设置ToolStripMenuItem1.Click += new System.EventHandler(this.启动设置ToolStripMenuItem1_Click);
             // 
@@ -800,6 +772,20 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "mA";
             // 
+            // ZedGraphControl1
+            // 
+            this.ZedGraphControl1.Location = new System.Drawing.Point(0, 2);
+            this.ZedGraphControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.ZedGraphControl1.Name = "ZedGraphControl1";
+            this.ZedGraphControl1.ScrollMaxX = 0D;
+            this.ZedGraphControl1.ScrollMaxY = 0D;
+            this.ZedGraphControl1.ScrollMaxY2 = 0D;
+            this.ZedGraphControl1.ScrollMinX = 0D;
+            this.ZedGraphControl1.ScrollMinY = 0D;
+            this.ZedGraphControl1.ScrollMinY2 = 0D;
+            this.ZedGraphControl1.Size = new System.Drawing.Size(1707, 627);
+            this.ZedGraphControl1.TabIndex = 8;
+            // 
             // Mainform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -867,7 +853,6 @@
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button8;
-        private ZedGraph.ZedGraphControl ZedGraphControl1;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel5;
@@ -908,5 +893,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label10;
+        private ZedGraph.ZedGraphControl ZedGraphControl1;
     }
 }

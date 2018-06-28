@@ -300,3 +300,5 @@ C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接�
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\PS5000CSConsole.csprojResolveAssemblyReference.cache
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\getTandFdataNative.dll
 C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\bin\Debug\readtimedata.dll
+C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\ps5000example.ketingzaosheng.Calculate.resources
+C:\Users\m1881\Desktop\电晕电流可听噪声数据\第4章可听噪声间接检测软件\电晕电流2018\obj\Debug\ps5000example.setcanshu.resources

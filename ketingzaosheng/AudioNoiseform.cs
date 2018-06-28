@@ -271,25 +271,61 @@ namespace ps5000example
 
         }
 
-       
-        
 
-       
+
+
+
 
 
         private void button5_Click(object sender, EventArgs e)
         {
-            get_Shujuchuli_data_byMatlab(strFileName8, strFileName0, zedGraphControl4,zedGraphControl3, zedGraphControl2);
-            zedGraphControl3.Visible = true;
-            zedGraphControl4.Visible = true;
+
+            //if (textBox_Fs0.Text == "62.5 M" || textBox_Fs0.Text == "500 M")
+            //{
+                get_Shujuchuli_data_byMatlab(strFileName8, strFileName0, zedGraphControl4, zedGraphControl3, zedGraphControl2);
+                zedGraphControl3.Visible = true;
+                zedGraphControl4.Visible = true;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("所选择数据采样率不同，无法进行相关性处理");
+            //    return;
+            //}
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
 
+            //DataTable dt = new DataTable();
+            //DataColumn dc = new DataColumn("Number");
+            //dt.Columns.Add(dc);
+            //foreach (int s in intArr)
+            //{
+            //    dt.Rows.Add(s);
+            //}
+
+            //this.dataGridView1.DataSource = dt;
+            //dataGridView1.Refresh();
+            dataGridView1.Visible = true;
+            button7.Visible = true;
+            button8.Visible = true;
+
+            this.dataGridView1.ColumnCount = 3;
+            dataGridView1.Columns[0].HeaderCell.Value = "序号";
+            dataGridView1.Columns[1].HeaderCell.Value = "中心频率(HZ)";
+            dataGridView1.Columns[2].HeaderCell.Value = "幅值(dB)";
+            for (int i = 0; i < 31; i++)
+            {
+                int index = this.dataGridView1.Rows.Add();
+                this.dataGridView1.Rows[index].Cells[0].Value = i+1;
+                this.dataGridView1.Rows[index].Cells[1].Value = Center_freq_for_AN[0, i];
+                this.dataGridView1.Rows[index].Cells[2].Value = Yc_for_AN[0, i];
+            }
+
         }
 
-        
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -338,46 +374,35 @@ namespace ps5000example
         double[,] Center_freq_for_AN;
         double[,] Yc_for_AN;
 
-        private void button6_Click_1(object sender, EventArgs e)
+        private void button8_Click(object sender, EventArgs e)
         {
-            //int[] intArr = new int[100];
-            //ArrayList myList = new ArrayList();
+            ExcelHelp excelHelp = new ExcelHelp();
+            excelHelp.DataGridViewToExcel(dataGridView1);
+        }
 
-
-            //Generate 100 different numbers
-            //Random rnd = new Random();
-            //while (myList.Count < 100)
-            //{
-            //    int num = rnd.Next(1, 101);
-            //    if (!myList.Contains(num))
-            //        myList.Add(num);
-            //}
-
-            //for (int i = 0; i < 100; i++)
-            //    intArr[i] = (int)myList[i];
-
-            //DataTable dt = new DataTable();
-            //DataColumn dc = new DataColumn("Number");
-            //dt.Columns.Add(dc);
-            //foreach (int s in intArr)
-            //{
-            //    dt.Rows.Add(s);
-            //}
-
-            //this.dataGridView1.DataSource = dt;
-            //dataGridView1.Refresh();
+        private void button7_Click_1(object sender, EventArgs e)
+        {
             this.dataGridView1.ColumnCount = 3;
             dataGridView1.Columns[0].HeaderCell.Value = "序号";
-            dataGridView1.Columns[1].HeaderCell.Value = "中心频率";
-            dataGridView1.Columns[2].HeaderCell.Value = "幅值";
-            for (int i=0;i<31;i++)
+            dataGridView1.Columns[1].HeaderCell.Value = "中心频率(HZ)";
+            dataGridView1.Columns[2].HeaderCell.Value = "幅值(dB)";
+            for (int i = 0; i < 31; i++)
             {
                 int index = this.dataGridView1.Rows.Add();
                 this.dataGridView1.Rows[index].Cells[0].Value = i;
-                this.dataGridView1.Rows[index].Cells[1].Value = Center_freq_for_AN[0, i];
-                this.dataGridView1.Rows[index].Cells[2].Value = Yc_for_AN[0, i];
+                this.dataGridView1.Rows[index].Cells[1].Value = i;
+                this.dataGridView1.Rows[index].Cells[2].Value = i;
             }
+            dataGridView1.Refresh();
+            ExcelHelp excel = new ExcelHelp();
+            DataTable dt = excel.GetDgvToTable(dataGridView1);
+
+            ps5000example.ketingzaosheng.Calculate calculate = new ketingzaosheng.Calculate();
+            calculate.Owner = this;
             
+            calculate.get_data(dt);
+            calculate.Show();
+            //this.Hide();
         }
 
         private void get_FFT_data_byMatlab(string strfile, ZedGraphControl zgc)
@@ -446,6 +471,7 @@ namespace ps5000example
             zgc0.GraphPane.CurveList.Clear();
             PointPairList list1 = new PointPairList();
             zgc1.GraphPane.CurveList.Clear();
+            zgc.GraphPane.CurveList.Clear();
             PointPairList list2 = new PointPairList();
             PointPairList list3 = new PointPairList();
 

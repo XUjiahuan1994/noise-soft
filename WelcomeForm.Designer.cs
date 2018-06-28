@@ -40,29 +40,29 @@
             this.label1.Font = new System.Drawing.Font("华文隶书", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(415, 95);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(313, 38);
+            this.label1.Size = new System.Drawing.Size(321, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "电晕电流测量软件";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("隶书", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Font = new System.Drawing.Font("隶书", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.Location = new System.Drawing.Point(247, 268);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(212, 89);
             this.button1.TabIndex = 1;
-            this.button1.Text = "电晕电流直接测量";
+            this.button1.Text = "电晕电流测量";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("隶书", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Font = new System.Drawing.Font("隶书", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.Location = new System.Drawing.Point(629, 267);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(212, 90);
             this.button2.TabIndex = 2;
-            this.button2.Text = "电晕电流间接检测";
+            this.button2.Text = "可听噪声\r\n间接检测";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 

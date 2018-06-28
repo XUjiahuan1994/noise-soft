@@ -71,14 +71,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ps5000example.exe" size="274304">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ps5000example.exe" size="294272">
       <assemblyIdentity name="ps5000example" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>yk2Je4oOgD9LFX6zKmHtOfmeKgA=</dsig:DigestValue>
+        <dsig:DigestValue>r3SIm6d26xy2H34hQ98zWJWfnSA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

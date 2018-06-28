@@ -17,7 +17,8 @@ namespace ps5000example
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new WelcomeForm());
-            Application.Run(new AudioNoiseform());
+            // Application.Run(new AudioNoiseform());
+            Application.Run(new ps5000example.ketingzaosheng.Calculate());
         }
     }
 }

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AudioNoiseform));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.textBox_voltage0 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox_Fs0 = new System.Windows.Forms.TextBox();
@@ -59,14 +59,16 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel_figure = new System.Windows.Forms.Panel();
+            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
+            this.zedGraphControl3 = new ZedGraph.ZedGraphControl();
             this.zedGraphControl2 = new ZedGraph.ZedGraphControl();
             this.zedGraphControl1 = new ZedGraph.ZedGraphControl();
             this.button5 = new System.Windows.Forms.Button();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.zedGraphControl3 = new ZedGraph.ZedGraphControl();
-            this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
             this.button6 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,7 +84,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(11, 13);
+            this.tabControl1.Location = new System.Drawing.Point(12, 34);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(320, 519);
@@ -102,15 +104,6 @@
             this.tabPage1.Text = "单文件处理";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(5, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 15);
-            this.label10.TabIndex = 5;
-            this.label10.Text = "基本参数";
             // 
             // label6
             // 
@@ -136,6 +129,15 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(294, 182);
             this.panel3.TabIndex = 3;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(5, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(67, 15);
+            this.label10.TabIndex = 5;
+            this.label10.Text = "基本参数";
             // 
             // textBox_voltage0
             // 
@@ -329,7 +331,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(326, 700);
+            this.tabPage2.Size = new System.Drawing.Size(312, 490);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "多文件处理";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -355,9 +357,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(40, 594);
+            this.button4.Location = new System.Drawing.Point(24, 609);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(140, 46);
+            this.button4.Size = new System.Drawing.Size(185, 70);
             this.button4.TabIndex = 4;
             this.button4.Text = "查看波形";
             this.button4.UseVisualStyleBackColor = true;
@@ -375,9 +377,39 @@
             this.panel_figure.Size = new System.Drawing.Size(1426, 774);
             this.panel_figure.TabIndex = 7;
             // 
+            // zedGraphControl4
+            // 
+            this.zedGraphControl4.Location = new System.Drawing.Point(706, 394);
+            this.zedGraphControl4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.zedGraphControl4.Name = "zedGraphControl4";
+            this.zedGraphControl4.ScrollMaxX = 0D;
+            this.zedGraphControl4.ScrollMaxY = 0D;
+            this.zedGraphControl4.ScrollMaxY2 = 0D;
+            this.zedGraphControl4.ScrollMinX = 0D;
+            this.zedGraphControl4.ScrollMinY = 0D;
+            this.zedGraphControl4.ScrollMinY2 = 0D;
+            this.zedGraphControl4.Size = new System.Drawing.Size(706, 371);
+            this.zedGraphControl4.TabIndex = 5;
+            this.zedGraphControl4.Visible = false;
+            // 
+            // zedGraphControl3
+            // 
+            this.zedGraphControl3.Location = new System.Drawing.Point(706, 21);
+            this.zedGraphControl3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.zedGraphControl3.Name = "zedGraphControl3";
+            this.zedGraphControl3.ScrollMaxX = 0D;
+            this.zedGraphControl3.ScrollMaxY = 0D;
+            this.zedGraphControl3.ScrollMaxY2 = 0D;
+            this.zedGraphControl3.ScrollMinX = 0D;
+            this.zedGraphControl3.ScrollMinY = 0D;
+            this.zedGraphControl3.ScrollMinY2 = 0D;
+            this.zedGraphControl3.Size = new System.Drawing.Size(706, 374);
+            this.zedGraphControl3.TabIndex = 4;
+            this.zedGraphControl3.Visible = false;
+            // 
             // zedGraphControl2
             // 
-            this.zedGraphControl2.Location = new System.Drawing.Point(0, 373);
+            this.zedGraphControl2.Location = new System.Drawing.Point(0, 394);
             this.zedGraphControl2.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.zedGraphControl2.Name = "zedGraphControl2";
             this.zedGraphControl2.ScrollMaxX = 0D;
@@ -391,7 +423,7 @@
             // 
             // zedGraphControl1
             // 
-            this.zedGraphControl1.Location = new System.Drawing.Point(0, 0);
+            this.zedGraphControl1.Location = new System.Drawing.Point(0, 21);
             this.zedGraphControl1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.zedGraphControl1.Name = "zedGraphControl1";
             this.zedGraphControl1.ScrollMaxX = 0D;
@@ -405,9 +437,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(40, 720);
+            this.button5.Location = new System.Drawing.Point(28, 720);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(140, 46);
+            this.button5.Size = new System.Drawing.Size(181, 85);
             this.button5.TabIndex = 8;
             this.button5.Text = "电晕电流信号处理";
             this.button5.UseVisualStyleBackColor = true;
@@ -424,60 +456,53 @@
             this.comboBox2.Size = new System.Drawing.Size(161, 23);
             this.comboBox2.TabIndex = 11;
             // 
-            // zedGraphControl3
-            // 
-            this.zedGraphControl3.Location = new System.Drawing.Point(706, 0);
-            this.zedGraphControl3.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.zedGraphControl3.Name = "zedGraphControl3";
-            this.zedGraphControl3.ScrollMaxX = 0D;
-            this.zedGraphControl3.ScrollMaxY = 0D;
-            this.zedGraphControl3.ScrollMaxY2 = 0D;
-            this.zedGraphControl3.ScrollMinX = 0D;
-            this.zedGraphControl3.ScrollMinY = 0D;
-            this.zedGraphControl3.ScrollMinY2 = 0D;
-            this.zedGraphControl3.Size = new System.Drawing.Size(706, 374);
-            this.zedGraphControl3.TabIndex = 4;
-            this.zedGraphControl3.Visible = false;
-            // 
-            // zedGraphControl4
-            // 
-            this.zedGraphControl4.Location = new System.Drawing.Point(706, 373);
-            this.zedGraphControl4.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.zedGraphControl4.Name = "zedGraphControl4";
-            this.zedGraphControl4.ScrollMaxX = 0D;
-            this.zedGraphControl4.ScrollMaxY = 0D;
-            this.zedGraphControl4.ScrollMaxY2 = 0D;
-            this.zedGraphControl4.ScrollMinX = 0D;
-            this.zedGraphControl4.ScrollMinY = 0D;
-            this.zedGraphControl4.ScrollMinY2 = 0D;
-            this.zedGraphControl4.Size = new System.Drawing.Size(706, 371);
-            this.zedGraphControl4.TabIndex = 5;
-            this.zedGraphControl4.Visible = false;
-            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(35, 865);
+            this.button6.Location = new System.Drawing.Point(28, 855);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 46);
+            this.button6.Size = new System.Drawing.Size(181, 83);
             this.button6.TabIndex = 12;
-            this.button6.Text = "计算可听噪声A声级";
+            this.button6.Text = "计算电晕电流1/3倍频程";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click_1);
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(352, 822);
+            this.dataGridView1.Location = new System.Drawing.Point(352, 794);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(266, 149);
+            this.dataGridView1.Size = new System.Drawing.Size(387, 227);
             this.dataGridView1.TabIndex = 13;
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(1014, 855);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(181, 83);
+            this.button7.TabIndex = 14;
+            this.button7.Text = "计算可听噪声A声级";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(792, 855);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(181, 83);
+            this.button8.TabIndex = 15;
+            this.button8.Text = "保存数据";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Visible = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // AudioNoiseform
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.button7);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button4);
@@ -487,7 +512,7 @@
             this.Controls.Add(this.tabControl1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AudioNoiseform";
-            this.Text = "AudioNoiseform";
+            this.Text = "电晕电流处理";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AudioNoiseform_Load);
             this.tabControl1.ResumeLayout(false);
@@ -546,5 +571,7 @@
         private ZedGraph.ZedGraphControl zedGraphControl3;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button8;
     }
 }
