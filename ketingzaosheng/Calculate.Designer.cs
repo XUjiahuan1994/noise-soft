@@ -48,7 +48,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.label_AN = new System.Windows.Forms.Label();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.label_AN = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -76,13 +78,12 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(99, 922);
+            this.button1.Location = new System.Drawing.Point(25, 929);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(265, 83);
+            this.button1.Size = new System.Drawing.Size(132, 57);
             this.button1.TabIndex = 17;
             this.button1.Text = "读取电晕电流1/3倍频程数值";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
@@ -173,7 +174,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(811, 532);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 245);
+            this.panel1.Size = new System.Drawing.Size(611, 245);
             this.panel1.TabIndex = 23;
             this.panel1.Visible = false;
             // 
@@ -191,7 +192,7 @@
             // 
             this.label_Gbool.AutoSize = true;
             this.label_Gbool.Font = new System.Drawing.Font("宋体", 14F);
-            this.label_Gbool.Location = new System.Drawing.Point(268, 132);
+            this.label_Gbool.Location = new System.Drawing.Point(388, 132);
             this.label_Gbool.Name = "label_Gbool";
             this.label_Gbool.Size = new System.Drawing.Size(22, 24);
             this.label_Gbool.TabIndex = 27;
@@ -201,7 +202,7 @@
             // 
             this.label_Gmax.AutoSize = true;
             this.label_Gmax.Font = new System.Drawing.Font("宋体", 14F);
-            this.label_Gmax.Location = new System.Drawing.Point(268, 89);
+            this.label_Gmax.Location = new System.Drawing.Point(388, 89);
             this.label_Gmax.Name = "label_Gmax";
             this.label_Gmax.Size = new System.Drawing.Size(22, 24);
             this.label_Gmax.TabIndex = 26;
@@ -211,7 +212,7 @@
             // 
             this.label_gaodu.AutoSize = true;
             this.label_gaodu.Font = new System.Drawing.Font("宋体", 14F);
-            this.label_gaodu.Location = new System.Drawing.Point(268, 46);
+            this.label_gaodu.Location = new System.Drawing.Point(388, 46);
             this.label_gaodu.Name = "label_gaodu";
             this.label_gaodu.Size = new System.Drawing.Size(22, 24);
             this.label_gaodu.TabIndex = 25;
@@ -268,15 +269,32 @@
             this.label9.TabIndex = 28;
             this.label9.Text = "选择计算方法";
             // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(183, 929);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(142, 57);
+            this.button4.TabIndex = 29;
+            this.button4.Text = "读取A计权系数值";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(349, 929);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(135, 57);
+            this.button5.TabIndex = 30;
+            this.button5.Text = "读取模型计算参数";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // label_AN
             // 
-            this.label_AN.AutoSize = true;
-            this.label_AN.Font = new System.Drawing.Font("宋体", 14F);
-            this.label_AN.Location = new System.Drawing.Point(268, 180);
+            this.label_AN.Location = new System.Drawing.Point(346, 180);
             this.label_AN.Name = "label_AN";
-            this.label_AN.Size = new System.Drawing.Size(22, 24);
-            this.label_AN.TabIndex = 29;
-            this.label_AN.Text = "0";
+            this.label_AN.Size = new System.Drawing.Size(128, 25);
+            this.label_AN.TabIndex = 31;
             // 
             // Calculate
             // 
@@ -284,7 +302,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.label9);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button3);
@@ -330,6 +350,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label_AN;
+        public System.Windows.Forms.Button button4;
+        public System.Windows.Forms.Button button5;
+        private System.Windows.Forms.TextBox label_AN;
     }
 }

@@ -54,9 +54,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.panel_figure = new System.Windows.Forms.Panel();
             this.zedGraphControl4 = new ZedGraph.ZedGraphControl();
@@ -69,13 +66,12 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel_data_voltage.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tabPage2.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel_figure.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +79,6 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(12, 34);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -96,12 +91,12 @@
             this.tabPage1.Controls.Add(this.panel3);
             this.tabPage1.Controls.Add(this.panel_data_voltage);
             this.tabPage1.Controls.Add(this.panel1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 25);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(312, 490);
+            this.tabPage1.Size = new System.Drawing.Size(312, 493);
             this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "单文件处理";
+            this.tabPage1.Text = "文件处理";
             this.tabPage1.UseVisualStyleBackColor = true;
             this.tabPage1.Click += new System.EventHandler(this.tabPage1_Click);
             // 
@@ -110,7 +105,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(14, 111);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 15);
+            this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 4;
             this.label6.Text = "基本参数";
             // 
@@ -135,7 +130,7 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(5, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(67, 15);
+            this.label10.Size = new System.Drawing.Size(53, 12);
             this.label10.TabIndex = 5;
             this.label10.Text = "基本参数";
             // 
@@ -143,7 +138,7 @@
             // 
             this.textBox_voltage0.Location = new System.Drawing.Point(101, 144);
             this.textBox_voltage0.Name = "textBox_voltage0";
-            this.textBox_voltage0.Size = new System.Drawing.Size(172, 25);
+            this.textBox_voltage0.Size = new System.Drawing.Size(172, 21);
             this.textBox_voltage0.TabIndex = 9;
             // 
             // label11
@@ -152,7 +147,7 @@
             this.label11.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label11.Location = new System.Drawing.Point(3, 145);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(109, 20);
+            this.label11.Size = new System.Drawing.Size(88, 16);
             this.label11.TabIndex = 8;
             this.label11.Text = "电压等级：";
             // 
@@ -160,21 +155,21 @@
             // 
             this.textBox_Fs0.Location = new System.Drawing.Point(101, 22);
             this.textBox_Fs0.Name = "textBox_Fs0";
-            this.textBox_Fs0.Size = new System.Drawing.Size(172, 25);
+            this.textBox_Fs0.Size = new System.Drawing.Size(172, 21);
             this.textBox_Fs0.TabIndex = 7;
             // 
             // textBox_size_n0
             // 
             this.textBox_size_n0.Location = new System.Drawing.Point(101, 63);
             this.textBox_size_n0.Name = "textBox_size_n0";
-            this.textBox_size_n0.Size = new System.Drawing.Size(172, 25);
+            this.textBox_size_n0.Size = new System.Drawing.Size(172, 21);
             this.textBox_size_n0.TabIndex = 6;
             // 
             // textBox_filename0
             // 
             this.textBox_filename0.Location = new System.Drawing.Point(101, 105);
             this.textBox_filename0.Name = "textBox_filename0";
-            this.textBox_filename0.Size = new System.Drawing.Size(172, 25);
+            this.textBox_filename0.Size = new System.Drawing.Size(172, 21);
             this.textBox_filename0.TabIndex = 5;
             // 
             // label7
@@ -183,7 +178,7 @@
             this.label7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label7.Location = new System.Drawing.Point(3, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(89, 20);
+            this.label7.Size = new System.Drawing.Size(72, 16);
             this.label7.TabIndex = 2;
             this.label7.Text = "文件名：";
             // 
@@ -193,7 +188,7 @@
             this.label8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label8.Location = new System.Drawing.Point(3, 67);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(109, 20);
+            this.label8.Size = new System.Drawing.Size(88, 16);
             this.label8.TabIndex = 1;
             this.label8.Text = "数据点数：";
             // 
@@ -203,7 +198,7 @@
             this.label9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label9.Location = new System.Drawing.Point(3, 29);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(89, 20);
+            this.label9.Size = new System.Drawing.Size(72, 16);
             this.label9.TabIndex = 0;
             this.label9.Text = "采样率：";
             // 
@@ -226,7 +221,7 @@
             // 
             this.textBox_voltage8.Location = new System.Drawing.Point(101, 141);
             this.textBox_voltage8.Name = "textBox_voltage8";
-            this.textBox_voltage8.Size = new System.Drawing.Size(172, 25);
+            this.textBox_voltage8.Size = new System.Drawing.Size(172, 21);
             this.textBox_voltage8.TabIndex = 8;
             // 
             // label5
@@ -235,7 +230,7 @@
             this.label5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label5.Location = new System.Drawing.Point(4, 142);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 20);
+            this.label5.Size = new System.Drawing.Size(88, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "电压等级：";
             // 
@@ -243,21 +238,21 @@
             // 
             this.textBox_Fs8.Location = new System.Drawing.Point(101, 22);
             this.textBox_Fs8.Name = "textBox_Fs8";
-            this.textBox_Fs8.Size = new System.Drawing.Size(172, 25);
+            this.textBox_Fs8.Size = new System.Drawing.Size(172, 21);
             this.textBox_Fs8.TabIndex = 6;
             // 
             // textBox_size_n8
             // 
             this.textBox_size_n8.Location = new System.Drawing.Point(101, 60);
             this.textBox_size_n8.Name = "textBox_size_n8";
-            this.textBox_size_n8.Size = new System.Drawing.Size(172, 25);
+            this.textBox_size_n8.Size = new System.Drawing.Size(172, 21);
             this.textBox_size_n8.TabIndex = 5;
             // 
             // textBox_filename8
             // 
             this.textBox_filename8.Location = new System.Drawing.Point(101, 100);
             this.textBox_filename8.Name = "textBox_filename8";
-            this.textBox_filename8.Size = new System.Drawing.Size(172, 25);
+            this.textBox_filename8.Size = new System.Drawing.Size(172, 21);
             this.textBox_filename8.TabIndex = 4;
             this.textBox_filename8.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -267,7 +262,7 @@
             this.label3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label3.Location = new System.Drawing.Point(10, 100);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 20);
+            this.label3.Size = new System.Drawing.Size(72, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "文件名：";
             // 
@@ -277,7 +272,7 @@
             this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.Location = new System.Drawing.Point(3, 62);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(109, 20);
+            this.label2.Size = new System.Drawing.Size(88, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "数据点数：";
             // 
@@ -287,7 +282,7 @@
             this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(9, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 20);
+            this.label1.Size = new System.Drawing.Size(72, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "采样率：";
             // 
@@ -325,41 +320,11 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // tabPage2
-            // 
-            this.tabPage2.Controls.Add(this.panel2);
-            this.tabPage2.Location = new System.Drawing.Point(4, 25);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(312, 490);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "多文件处理";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(6, 6);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(536, 111);
-            this.panel2.TabIndex = 0;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("宋体", 10F);
-            this.button2.Location = new System.Drawing.Point(3, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 72);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "选择文件夹";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(24, 609);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(185, 70);
+            this.button4.Size = new System.Drawing.Size(185, 75);
             this.button4.TabIndex = 4;
             this.button4.Text = "查看波形";
             this.button4.UseVisualStyleBackColor = true;
@@ -437,9 +402,9 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(28, 720);
+            this.button5.Location = new System.Drawing.Point(24, 702);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(181, 85);
+            this.button5.Size = new System.Drawing.Size(185, 85);
             this.button5.TabIndex = 8;
             this.button5.Text = "电晕电流信号处理";
             this.button5.UseVisualStyleBackColor = true;
@@ -453,14 +418,14 @@
             "加压信号离散频谱"});
             this.comboBox2.Location = new System.Drawing.Point(35, 565);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(161, 23);
+            this.comboBox2.Size = new System.Drawing.Size(161, 20);
             this.comboBox2.TabIndex = 11;
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(28, 855);
+            this.button6.Location = new System.Drawing.Point(22, 814);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(181, 83);
+            this.button6.Size = new System.Drawing.Size(187, 83);
             this.button6.TabIndex = 12;
             this.button6.Text = "计算电晕电流1/3倍频程";
             this.button6.UseVisualStyleBackColor = true;
@@ -474,6 +439,7 @@
             this.dataGridView1.RowTemplate.Height = 27;
             this.dataGridView1.Size = new System.Drawing.Size(387, 227);
             this.dataGridView1.TabIndex = 13;
+            this.dataGridView1.Visible = false;
             // 
             // button7
             // 
@@ -483,6 +449,7 @@
             this.button7.TabIndex = 14;
             this.button7.Text = "计算可听噪声A声级";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Visible = false;
             this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
             // button8
@@ -496,11 +463,23 @@
             this.button8.Visible = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("宋体", 10F);
+            this.button2.Location = new System.Drawing.Point(25, 933);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(184, 77);
+            this.button2.TabIndex = 16;
+            this.button2.Text = "选择文件夹";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Visible = false;
+            // 
             // AudioNoiseform
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(1902, 1033);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.dataGridView1);
@@ -523,8 +502,6 @@
             this.panel_data_voltage.ResumeLayout(false);
             this.panel_data_voltage.PerformLayout();
             this.panel1.ResumeLayout(false);
-            this.tabPage2.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel_figure.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -539,9 +516,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
@@ -573,5 +547,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -392,6 +392,33 @@ namespace ps5000example
                 return null;
             }
         }
+        public DataTable LoadDataFromExcel_sheel2(string filePath)
+        {
+
+            try
+            {
+                string strConn;
+                //strConn = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=" + filePath + ";Extended Properties='Excel 8.0;HDR=False;IMEX=1'"; 
+                strConn = string.Format("Provider=Microsoft.ACE.OLEDB.12.0;Data Source={0};Extended Properties='Excel 8.0;HDR=Yes;IMEX=1;'", filePath);
+                OleDbConnection OleConn = new OleDbConnection(strConn);
+                OleConn.Open();
+                String sql = "SELECT * FROM  [Sheet2$]";//可是更改Sheet名称，比如sheet2，等等  
+
+                OleDbDataAdapter OleDaExcel = new OleDbDataAdapter(sql, OleConn);
+                DataSet OleDsExcle = new DataSet();
+                OleDaExcel.Fill(OleDsExcle, "Sheet2");
+                OleConn.Close();
+                DataTable dt = OleDsExcle.Tables[0];
+                return dt;
+            }
+            catch (Exception err)
+            {
+
+                return null;
+            }
+        }
+
+        
 
     }
 }

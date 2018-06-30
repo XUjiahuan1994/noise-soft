@@ -280,19 +280,20 @@ namespace ps5000example
         private void button5_Click(object sender, EventArgs e)
         {
 
-            //if (textBox_Fs0.Text == "62.5 M" || textBox_Fs0.Text == "500 M")
-            //{
+            if (textBox_Fs0.Text == "62.5 M" || textBox_Fs0.Text == "500 M")
+            {
+                MessageBox.Show("数据量较大，请等待");
                 get_Shujuchuli_data_byMatlab(strFileName8, strFileName0, zedGraphControl4, zedGraphControl3, zedGraphControl2);
                 zedGraphControl3.Visible = true;
                 zedGraphControl4.Visible = true;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("所选择数据采样率不同，无法进行相关性处理");
-            //    return;
-            //}
-            
         }
+            else
+            {
+                MessageBox.Show("所选择数据采样率不同，无法进行相关性处理");
+                return;
+            }
+
+}
 
         private void button6_Click(object sender, EventArgs e)
         {
